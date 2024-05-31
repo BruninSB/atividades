@@ -4,6 +4,7 @@
  */
 package Tela;
 
+import DAO.ConnectionFactory;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,10 +42,12 @@ public class LoginTela extends javax.swing.JFrame {
         setType(java.awt.Window.Type.UTILITY);
         getContentPane().setLayout(null);
 
+        txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtUsuario.setBorder(null);
         getContentPane().add(txtUsuario);
         txtUsuario.setBounds(320, 265, 205, 40);
 
+        txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtSenha.setBorder(null);
         getContentPane().add(txtSenha);
         txtSenha.setBounds(320, 369, 205, 40);
@@ -59,9 +62,9 @@ public class LoginTela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ckSenha);
-        ckSenha.setBounds(370, 430, 140, 29);
+        ckSenha.setBounds(370, 430, 140, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Tela_de_Login_2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 890, 600);
 
@@ -72,9 +75,9 @@ public class LoginTela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btLogar);
-        btLogar.setBounds(364, 472, 166, 35);
+        btLogar.setBounds(364, 472, 163, 35);
 
-        setSize(new java.awt.Dimension(905, 604));
+        setSize(new java.awt.Dimension(905, 635));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -87,6 +90,8 @@ public class LoginTela extends javax.swing.JFrame {
         if ("adm".equals(login) && "adm".equals(senha))
         {
             JOptionPane.showMessageDialog(null, "Seja bem vindo!!!"); 
+            ConnectionFactory factory = new ConnectionFactory();
+            factory.obtemConexao();
             abrirTelaMenu();
         }
         

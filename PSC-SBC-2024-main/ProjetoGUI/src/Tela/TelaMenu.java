@@ -4,6 +4,8 @@
  */
 package Tela;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author erica
@@ -26,74 +28,112 @@ public class TelaMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu5 = new javax.swing.JMenu();
+        jLabel1 = new javax.swing.JLabel();
+        btUsuario = new javax.swing.JButton();
+        btMedico = new javax.swing.JButton();
+        btAdm = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        menuCadastro = new javax.swing.JMenu();
-        menuUsuarios = new javax.swing.JMenuItem();
-        menuopcoes = new javax.swing.JMenu();
-        menuSair = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+
+        jMenu5.setText("jMenu5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setExtendedState(getExtendedState());
         setName("menu"); // NOI18N
+        getContentPane().setLayout(null);
 
-        menuCadastro.setText("Cadastros");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/telaMenu.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 970, 573);
 
-        menuUsuarios.setText("Usuários");
-        menuUsuarios.addActionListener(new java.awt.event.ActionListener() {
+        btUsuario.setText("Usuario");
+        btUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuUsuariosActionPerformed(evt);
+                btUsuarioActionPerformed(evt);
             }
         });
-        menuCadastro.add(menuUsuarios);
+        getContentPane().add(btUsuario);
+        btUsuario.setBounds(121, 238, 143, 151);
 
-        jMenuBar1.add(menuCadastro);
-
-        menuopcoes.setText("Opções");
-
-        menuSair.setText("Sair");
-        menuSair.addActionListener(new java.awt.event.ActionListener() {
+        btMedico.setText("Medico");
+        btMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuSairActionPerformed(evt);
+                btMedicoActionPerformed(evt);
             }
         });
-        menuopcoes.add(menuSair);
+        getContentPane().add(btMedico);
+        btMedico.setBounds(373, 238, 143, 151);
 
-        jMenuBar1.add(menuopcoes);
+        btAdm.setText("ADM");
+        btAdm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAdmActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btAdm);
+        btAdm.setBounds(628, 238, 143, 151);
+
+        jMenu1.setText("Cadastros");
+
+        jMenuItem1.setText("Usuários");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Relatórios");
+
+        jMenuItem5.setText("jMenuItem5");
+        jMenu2.add(jMenuItem5);
+
+        jMenuItem6.setText("jMenuItem6");
+        jMenu2.add(jMenuItem6);
+
+        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 737, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        setSize(new java.awt.Dimension(751, 539));
+        setSize(new java.awt.Dimension(905, 604));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void menuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUsuariosActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
      
         TelaCadUsu telaCadUsu = new TelaCadUsu();
         telaCadUsu.setVisible(true);   
         
-    }//GEN-LAST:event_menuUsuariosActionPerformed
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
-        
-        dispose();
-        
-        LoginTela login = new LoginTela();
-        login.setVisible(true);
+    private void btUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUsuarioActionPerformed
+    
+        JOptionPane.showMessageDialog(null, "Em Desenvolvimento !");
         
         // TODO add your handling code here:
-    }//GEN-LAST:event_menuSairActionPerformed
+    }//GEN-LAST:event_btUsuarioActionPerformed
+
+    private void btMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMedicoActionPerformed
+
+        JOptionPane.showMessageDialog(null, "Em Desenvolvimento !");
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btMedicoActionPerformed
+
+    private void btAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAdmActionPerformed
+
+        JOptionPane.showMessageDialog(null, "Em Desenvolvimento !");
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btAdmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,10 +171,16 @@ public class TelaMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btAdm;
+    private javax.swing.JButton btMedico;
+    private javax.swing.JButton btUsuario;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu menuCadastro;
-    private javax.swing.JMenuItem menuSair;
-    private javax.swing.JMenuItem menuUsuarios;
-    private javax.swing.JMenu menuopcoes;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     // End of variables declaration//GEN-END:variables
 }
